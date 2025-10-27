@@ -3,14 +3,49 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.SecondaryController">
+<VBox alignment="CENTER" spacing="12.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="aydin.firebasedemo.SecondaryController">
+
     <children>
-        <Label text="Secondary View" />
-        <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Switch to Primary View" />
+        <Label text="Persons — Read &amp; Write"/>
+
+        <HBox alignment="CENTER" spacing="8.0">
+            <children>
+                <TextField fx:id="nameTextField"  promptText="name"/>
+                <TextField fx:id="ageTextField"   promptText="age"/>
+                <TextField fx:id="phoneTextField" promptText="phone"/>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Button fx:id="readButton"
+                        text="Read"
+                        prefHeight="30.0" prefWidth="80.0"
+                        onAction="#readButtonClicked"/>
+                <Button fx:id="writeButton"
+                        text="Write"
+                        prefHeight="30.0" prefWidth="80.0"
+                        onAction="#writeButtonClicked"/>
+                <Button fx:id="secondaryButton"
+                        text="Back to Welcome"
+                        onAction="#switchToPrimary"/>
+            </children>
+        </HBox>
+
+        <TextArea fx:id="outputTextArea"
+                  prefHeight="240.0" prefWidth="520.0"
+                  editable="false"/>
     </children>
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
     </padding>
 </VBox>

@@ -1,0 +1,3 @@
+.root { -fx-font-family: Inter, Arial; }
+.button { -fx-background-radius: 8; -fx-padding: 8 14; }
+.text-field, .password-field { -fx-background-radius: 8; -fx-padding: 8; }
